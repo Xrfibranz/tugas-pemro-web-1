@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FURINA THE FONTAINE</title>
+
+    <link rel="stylesheet" href="Assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+      <!-- MUSIC BUTTON -->
+
+<div class="music-player">
+
+  <button id="music-toggle">
+    ♪
+  </button>
+
+  <audio id="bg-music" loop>
+    <source src="Assets/music/WhatsApp Audio 2026-05-19 at 20.43.21 (1).mp3" type="audio/mp3">
+  </audio>
+
+</div>
+
+<script>
+
+const music = document.getElementById("bg-music");
+const button = document.getElementById("music-toggle");
+
+let isPlaying = false;
+
+button.addEventListener("click", () => {
+
+    if(isPlaying){
+
+        music.pause();
+        button.classList.remove("active");
+
+    }else{
+
+        music.play();
+        button.classList.add("active");
+    }
+
+    isPlaying = !isPlaying;
+});
+
+</script>
+  <body>
+
+    <header>
+      <div class="jumbotron">
+        <p class="nama-usaha">FURINA THE FONTAINE</p>
+        <p>Mengenal Furina sang dewi dari Fontaine</p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#Story">Story</a></li>
+          <li><a href="#ability">Ability</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        
+        <article id="beranda" class="card">
+          <h2>About Furina</h2>
+          <img
+            src="Assets/Image/mybini.jpg"
+            alt="Furina Beranda"
+            class="main-image"
+          />
+          <p>
+            Furina adalah karakter Hydro dari region Fontaine di dunia Teyvat. 
+            Ia dikenal sebagai mantan Hydro Archon dengan kepribadian dramatis, 
+            elegan, dan penuh karisma yang selalu memukau panggung opera.
+          </p>
+          <p>
+            Sebagai sosok yang pernah memimpin Fontaine, Furina memiliki peran 
+            penting dalam cerita utama (Archon Quest) dan menjadi salah satu karakter 
+            paling populer karena desainnya yang menawan, kepribadian yang kompleks, 
+            serta perkembangan cerita yang sangat emosional.
+          </p>
+        </article>
+
+        <article id="Story" class="card">
+          <h2>Story</h2>
+          <p>Berikut adalah sekilas kisah mengenai sang bintang utama Fontaine:</p>
+
+          <section>
+            <h3>The Nation of Justice</h3>
+            <img
+              src="Assets/Image/inijuga.png"
+              alt="Furina Story"
+              class="main-image"
+            />
+            <p>
+              Fontaine dikenal sebagai bangsa keadilan, tempat di mana hukum, 
+              pengadilan, dan sandiwara menjadi pusat kehidupan masyarakatnya. 
+              Di balik panggung kemegahan Opera Epiclese, Furina memikul beban berat 
+              untuk menyelamatkan rakyatnya dari ramalan kuno.
+            </p>
+            <p>
+              Meskipun ia tampil sebagai sosok yang penuh percaya diri, teatrikal, 
+              dan flamboyan di depan publik, Furina sebenarnya menyimpan banyak rahasia 
+              besar dan tekanan mental yang ia sembunyikan rapat-rapat selama ratusan tahun.
+            </p>
+          </section>
+        </article>
+
+        <article id="ability" class="card">
+          <h2>Furina Ability</h2>
+          <p>
+            Di dalam pertempuran, Furina memiliki kemampuan unik yang berbasis pada manipulasi HP party:
+          </p>
+
+          <section>
+            <h3>Hydro Vision & Arkhe Shift</h3>
+            <p>
+              Furina merupakan satu-satunya karakter yang dapat berganti pola Arkhe (Pneuma dan Ousia) 
+              secara instan melalui Charged Attack, mengubah penampilannya sekaligus efek kemampuannya.
+            </p>
+          </section>
+
+          <section>
+            <h3>Salon Solitaire (Elemental Skill)</h3>
+            <p>
+              Furina dapat memanggil tiga anggota salon versi Ousia untuk menyerang musuh secara otomatis 
+              sembari mengonsumsi HP tim, atau memanggil Singer of Many Waters versi Pneuma untuk menyembuhkan karakter aktif.
+            </p>
+          </section>
+
+          <section>
+            <h3>Let the People Rejoice (Elemental Burst)</h3>
+            <p>
+              Memicu kemeriahan panggung yang memberikan buff Damage dan bonus pemulihan besar 
+              kepada seluruh anggota tim berdasarkan naik-turunnya persentase HP mereka.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <aside>
+        <article class="logo card">
+          <header>
+            <h2>Character Info</h2>
+            <p>Furina of Fontaine</p>
+            <figure>
+              <img src="Assets/Image/apalagi.png" alt="Furina Icon" />
+            </figure>
+          </header>
+
+          <section>
+            <h3>Informasi Karakter</h3>
+            <table>
+              <tr>
+                <th>Region    :</th>
+                <td>Fontaine</td>
+              </tr>
+              <tr>
+                <th>Element    :</th>
+                <td>Hydro</td>
+              </tr>
+              <tr>
+                <th>Weapon      :</th>
+                <td>Sword</td>
+              </tr>
+              <tr>
+                <th>Role        :</th>
+                <td>Support / Sub DPS</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Furina The Star of Fontaine</p>
+    </footer>
+
+    <script src=""></script>
+  </body>
+</html>
